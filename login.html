@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>welcome to ACE e-book's website</title>
+        <script>
+            FunctionValidateLoginform() {
+                var username=document.forms["f1"]["username"].value;
+                var password=document.forms["f1"]["password"].value;
+                if(username.trim()==""){
+                    alert("username cannot be empty");//shows an alert if empty
+                    return false;//prevents from submission
+                }
+                if(password.length<6){
+                    alert("password must be atleast 6 characters long");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body bgcolor="lightblue">
+        <center>
+            <br/>
+            <h3>logindetails</h3>
+            <br/>
+            <form name="f1"onsubmit="return validateLoginForm()">
+                <table align="center">
+                    <tr>
+                        <td>username:</td>
+                        <td>input type="text"name="username"/></td>
+                    </tr>
+                    <tr>
+                        <td><br/></td>
+                    </tr>
+                    <tr>
+                        <td>password:</td>
+                        <td>input type="password"name="password"/></td>
+                    </tr>
+                    <tr>
+                        <td><br/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit"value="submit"/>
+                            <input type="reset"value="reset"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </body>
+</html>
